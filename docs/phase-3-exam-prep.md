@@ -46,9 +46,11 @@ For practice exams and exam-day logistics, use the source site's [Practice Quest
 
 ## Phase 3 progress
 
-- [ ] Module 9 complete (Practice Test 9 ≥ 8/10)
-- [ ] Module 10 complete (Practice Test 10 ≥ 8/10)
+- [ ] Module 9 complete (anti-patterns memorized, hands-on shipped)
+- [ ] Module 10 complete (anti-patterns memorized, hands-on shipped)
 - [ ] Module 11 — all four exercises shipped
+- [ ] All Domain 5 questions attempted (filter: Context & Reliability, 5 questions)
+- [ ] All 25 questions on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) attempted at least once
 - [ ] All 18 anti-patterns recallable from memory
 - [ ] All 6 scenarios: every architectural decision recallable
 

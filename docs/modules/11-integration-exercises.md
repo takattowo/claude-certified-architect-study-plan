@@ -150,8 +150,8 @@ Build a CI workflow that:
 
 After completing all four exercises:
 
-- [ ] Take any Full Practice Exam available on the [source Practice Questions page](https://claudecertifications.com/claude-certified-architect/practice-questions)
-- [ ] Score yourself
+- [ ] Run through all 25 questions in the [source practice question bank](https://claudecertifications.com/claude-certified-architect/practice-questions) (filter "All Domains")
+- [ ] Score yourself per domain (the bank shows per-question feedback)
 - [ ] Identify your weakest 2 domains and re-read the relevant modules
 - [ ] Drill the [18 anti-patterns](../anti-patterns.md) from memory before scheduling
 

@@ -336,7 +336,7 @@ Dilutes attention. Multi-pass (local + integration) wins.
 
 ## 9. Verification
 
-- [ ] Practice Test 7 — score: ___ / 10
+- [ ] Answer the **5 Prompt Engineering questions** on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) (filter: Prompt Engineering). Aim ≥ 4 / 5 right
 - [ ] Can you state the few-shot count rule from memory?
 - [ ] Can you explain the `tool_use` trap in one sentence?
 - [ ] Can you write a specific-feedback retry message template?

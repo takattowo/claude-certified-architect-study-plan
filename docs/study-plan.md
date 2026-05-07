@@ -20,9 +20,13 @@ Every module has four parts:
 1. **Read & note** — concepts to absorb from the domain pages
 2. **Hands-on** — code something to anchor the concept
 3. **Anti-patterns to memorize** — wrong-answer patterns from the cheatsheet
-4. **Verify** — practice test from the source site
+4. **Verify** — answer the relevant slice of the [source practice question bank](https://claudecertifications.com/claude-certified-architect/practice-questions) (25 total, filterable by domain)
 
 You're done with a module when every checkbox is ticked **and** you can explain the anti-patterns in your own words.
+
+### About the practice questions
+
+The source site has **one** practice question bank: 25 questions total, filterable by domain (D1: 6, D2: 4, D3: 5, D4: 5, D5: 5). It's not split into "Practice Test 1, 2, 3…". Each module's verify step points you at the relevant domain filter.
 
 ## The 11 modules
 
@@ -53,7 +57,7 @@ Use these as milestones. Tick them as you complete each phase.
 - [ ] Phase 3 complete (Modules 9–11)
 - [ ] All 18 anti-patterns memorized
 - [ ] All 6 scenarios mastered
-- [ ] Practice Tests 1–10 (one per module 1–10): each ≥80%
+- [ ] All 25 questions on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) attempted at least once
 - [ ] All four hands-on integration exercises (Module 11) shipped
 - [ ] Exam registered on Skilljar (logistics: see [official FAQ](https://claudecertifications.com/claude-certified-architect/faq))
 - [ ] Exam passed (≥720 / 1000)

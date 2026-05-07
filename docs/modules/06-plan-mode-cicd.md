@@ -357,7 +357,7 @@ Both extremes are wrong. Match to task complexity.
 
 ## 10. Verification
 
-- [ ] Practice Test 6 — score: ___ / 10
+- [ ] Re-attempt the **Claude Code Config** filter on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) — focus on plan mode / CI/CD / Batches items
 - [ ] Can you write the TDD cycle in 5 lines from memory?
 - [ ] Can you list all three CI flags and what each does?
 - [ ] Can you state the Batches "when to use" rule in one sentence?

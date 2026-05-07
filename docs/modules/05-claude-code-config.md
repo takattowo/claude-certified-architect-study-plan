@@ -334,7 +334,7 @@ A skill with no `allowed-tools` can do anything — including dangerous things y
 
 ## 9. Verification
 
-- [ ] Practice Test 5 — score: ___ / 10
+- [ ] Answer the **5 Claude Code Config questions** on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) (filter: Claude Code Config). Aim ≥ 4 / 5 right — focus on hierarchy / commands-vs-skills items
 - [ ] Can you write out the precedence order from memory?
 - [ ] Can you list all three SKILL.md frontmatter fields and what each does?
 - [ ] Can you state the one-sentence "command vs skill" decision rule?

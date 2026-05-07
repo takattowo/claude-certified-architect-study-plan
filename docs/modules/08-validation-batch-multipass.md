@@ -352,7 +352,7 @@ Multi-pass beats it. Always.
 
 ## 9. Verification
 
-- [ ] Practice Test 8 — score: ___ / 10
+- [ ] Re-attempt the **Prompt Engineering** filter on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) — focus on validation / batch / multi-pass items
 - [ ] Can you describe the validation layers (schema/format/semantic/cross-field/external)?
 - [ ] Can you explain the same-session-review failure **mechanism** (not just the rule)?
 - [ ] Can you write a Batches submission skeleton from memory?

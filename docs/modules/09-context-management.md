@@ -327,7 +327,7 @@ When an error happens, a generic "something went wrong" message loses what was a
 
 ## 11. Verification
 
-- [ ] Practice Test 9 — score: ___ / 10
+- [ ] Answer the **5 Context & Reliability questions** on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) (filter: Context & Reliability). Aim ≥ 4 / 5 right
 - [ ] Can you draw a context layout diagram showing where case facts go?
 - [ ] Can you list the valid + invalid escalation triggers from memory?
 - [ ] Can you explain the lost-in-the-middle effect in one sentence?

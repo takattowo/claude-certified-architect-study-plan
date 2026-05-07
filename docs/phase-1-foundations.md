@@ -53,10 +53,12 @@ By the end of Phase 1 you should be able to:
 
 ## Phase 1 progress
 
-- [ ] Module 1 complete (10/10 anti-pattern checkboxes ticked, Practice Test 1 ≥ 8/10)
-- [ ] Module 2 complete (Practice Test 2 ≥ 8/10)
-- [ ] Module 3 complete (Practice Test 3 ≥ 8/10)
-- [ ] Module 4 complete (Practice Test 4 ≥ 8/10)
+- [ ] Module 1 complete (anti-patterns memorized, hands-on shipped)
+- [ ] Module 2 complete (anti-patterns memorized, hands-on shipped)
+- [ ] Module 3 complete (anti-patterns memorized, hands-on shipped)
+- [ ] Module 4 complete (anti-patterns memorized, hands-on shipped)
+- [ ] All Domain 1 questions on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) attempted at least once (filter: Agentic Architecture, 6 questions)
+- [ ] All Domain 2 questions attempted (filter: Tool Design & MCP, 4 questions)
 - [ ] Phase 1 retrospective written (what's still fuzzy?)
 
 ---

@@ -415,7 +415,7 @@ Use the purpose-built tool. Bash is for things that don't have one.
 
 ## 10. Verification
 
-- [ ] Practice Test 4 — score: ___ / 10
+- [ ] Answer the **4 Tool Design & MCP questions** on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) (filter: Tool Design & MCP). Aim ≥ 3 / 4 right
 - [ ] Can you write the four-field error shape from memory?
 - [ ] Can you list all six built-in tools and one-sentence "use for" each?
 - [ ] **Phase 1 retrospective:** what's still fuzzy? Note here:

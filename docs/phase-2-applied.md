@@ -53,10 +53,12 @@ By the end of Phase 2 you should be able to:
 
 ## Phase 2 progress
 
-- [ ] Module 5 complete (Practice Test 5 ≥ 8/10)
-- [ ] Module 6 complete (Practice Test 6 ≥ 8/10)
-- [ ] Module 7 complete (Practice Test 7 ≥ 8/10)
-- [ ] Module 8 complete (Practice Test 8 ≥ 8/10)
+- [ ] Module 5 complete (anti-patterns memorized, hands-on shipped)
+- [ ] Module 6 complete (anti-patterns memorized, hands-on shipped)
+- [ ] Module 7 complete (anti-patterns memorized, hands-on shipped)
+- [ ] Module 8 complete (anti-patterns memorized, hands-on shipped)
+- [ ] All Domain 3 questions attempted (filter: Claude Code Config, 5 questions)
+- [ ] All Domain 4 questions attempted (filter: Prompt Engineering, 5 questions)
 - [ ] Phase 2 retrospective written
 
 ---

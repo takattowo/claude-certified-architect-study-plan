@@ -215,7 +215,7 @@ Pollute the context to feel why isolation matters:
 
 ## 9. Verification
 
-- [ ] Practice Test 2 — score: ___ / 10
+- [ ] Re-attempt the **Agentic Architecture** filter (6 questions on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions)) — focus on multi-agent / orchestration items
 - [ ] Can you draw hub-and-spoke from memory and explain why it wins over flat?
 - [ ] Can you list the 3 reasons NOT to share full coordinator context?
 

@@ -310,7 +310,7 @@ Already covered above. Memorize: critical rule = hook. Always. No exceptions.
 
 ## 10. Verification
 
-- [ ] Practice Test 3 — score: ___ / 10
+- [ ] Re-attempt the **Agentic Architecture** filter on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) — focus on hooks / escalation / session items
 - [ ] Can you list all 5 valid escalation triggers and both invalid ones?
 - [ ] Can you write a one-line decision rule for hook vs prompt?
 - [ ] Can you explain when to fork vs resume in one sentence each?

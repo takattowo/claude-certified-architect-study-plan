@@ -300,7 +300,7 @@ If critical facts only live in conversation prose, compaction eats them. Move th
 
 ## 9. Verification
 
-- [ ] Practice Test 10 — score: ___ / 10
+- [ ] Re-attempt the **Context & Reliability** filter on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) — focus on provenance / stratified-metrics / context-degradation items
 - [ ] Can you list the four provenance fields?
 - [ ] Can you state when stratification matters in one sentence?
 - [ ] Can you list the four mitigations for context degradation?

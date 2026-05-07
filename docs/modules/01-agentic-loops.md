@@ -242,11 +242,11 @@ if turn == MAX_SAFETY_TURNS - 1:
 
 ## 7. Verification
 
-- [ ] Practice Test 1 (10 questions on the source site) — score: ___ / 10
+- [ ] Answer the **6 Domain 1 questions** on the [source practice bank](https://claudecertifications.com/claude-certified-architect/practice-questions) (filter: Agentic Architecture). Aim ≥ 5 / 6 right
 - [ ] Can you state, in one sentence each, what `tool_use` and `end_turn` mean?
 - [ ] Can you draw the five-step loop on a whiteboard from memory?
 
-If you scored < 8/10 on Practice Test 1, redo Step 3 (verify failure modes) — feeling the failures is what makes the rule stick.
+If you missed any Domain 1 questions about loop control, redo Step 3 (verify failure modes) — feeling the failures is what makes the rule stick.
 
 ---
 
