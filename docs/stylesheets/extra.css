@@ -35,9 +35,9 @@
 }
 
 /* Make tasklist checkboxes look clickable now that they are interactive */
-.task-list-item > input[type="checkbox"],
-li > input.task-list-item-checkbox,
-li > input[type="checkbox"]:not([disabled]) {
+.task-list-item .task-list-control,
+.task-list-item .task-list-indicator,
+.task-list-item input[type="checkbox"] {
   cursor: pointer;
 }
 

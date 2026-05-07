@@ -56,7 +56,7 @@
   function init() {
     const state = loadState();
     const boxes = document.querySelectorAll(
-      ".task-list-item > input[type=checkbox], li > input.task-list-item-checkbox, li > input[type=checkbox]"
+      '.task-list-item input[type="checkbox"]'
     );
     boxes.forEach((cb) => {
       cb.disabled = false;
