@@ -1,6 +1,6 @@
 # Quick Reference
 
-For last-minute review — the day before the exam, or right before the proctor opens the test.
+For last-minute review.
 
 ## "Always wrong on this exam" rules
 
@@ -51,17 +51,24 @@ If you remember nothing else, remember these:
 | D4 Prompt Engineering | ~20% |
 | D5 Context Management | ~15% |
 
-Heaviest weight: **D1 (~25%)**. If you're short on time, drill D1 last.
+Heaviest weight: **D1 (~25%)** — prioritize this domain when allocating study time.
 
 ---
 
-## Exam-day checklist
+## Exam logistics
 
-- [ ] Government-issued ID handy
-- [ ] Stable internet
-- [ ] Quiet room, no other apps
-- [ ] Skilljar portal logged in
-- [ ] Reviewed this page once
-- [ ] Took a breath
+For authoritative, up-to-date logistics (registration, format, prerequisites, retake policy, accommodations) consult the official sources:
 
-Good luck.
+- **Exam guide:** [claudecertifications.com/claude-certified-architect/exam-guide](https://claudecertifications.com/claude-certified-architect/exam-guide)
+- **FAQ:** [claudecertifications.com/claude-certified-architect/faq](https://claudecertifications.com/claude-certified-architect/faq)
+- **Registration:** [Anthropic Skilljar portal](https://anthropic.skilljar.com)
+
+Confirmed by the FAQ:
+
+- Multiple choice, scenario-based — no coding during the exam
+- 4 of 6 scenarios randomly selected per attempt
+- 720 / 1000 passing score
+- Currently free for the first 5,000 partner-company employees
+- Source recommends ~12 weeks at ~1 hr/day
+
+This site does not duplicate logistics info that may change. Check the source first.

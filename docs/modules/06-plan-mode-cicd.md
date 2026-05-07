@@ -179,6 +179,15 @@ Or in CI: two separate workflow steps, no shared state, no passed context beyond
 
 Submit many requests as a batch. Anthropic processes them within 24 hours. You get **50% cost savings** vs synchronous requests.
 
+### Hard limits per batch (from [official docs](https://platform.claude.com/docs/en/docs/build-with-claude/batch-processing))
+
+- **100,000 requests** OR **256 MB** per batch (whichever first)
+- `custom_id` must match `^[a-zA-Z0-9_-]{1,64}$` (1–64 chars, alphanumeric + hyphen + underscore)
+- **Results retained 29 days** post-creation
+- Batches scoped per Workspace
+- Each request needs `max_tokens >= 1`
+- Most batches finish in well under 24h; the 24h is the worst-case SLA, not the typical wait
+
 ### When it fits
 
 | Use Batches for | Don't use Batches for |

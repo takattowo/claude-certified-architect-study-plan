@@ -25,11 +25,11 @@ Open, forkable study plan for Anthropic's **Claude Certified Architect (Foundati
 
 <div class="grid cards" markdown>
 
--   :material-calendar-check: **12-module plan**
+-   :material-calendar-check: **11-module plan**
 
     ---
 
-    Three phases, twelve modules. Read, build, verify. Paced for ~3.5 hr/wk over ~20 weeks. Compress or stretch as needed.
+    Three phases, eleven modules. Read, build, verify. Paced for ~3.5 hr/wk over ~18 weeks. Compress or stretch as needed.
 
     [Open the plan :material-arrow-right:](study-plan.md)
 

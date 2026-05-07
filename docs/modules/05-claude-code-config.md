@@ -13,23 +13,39 @@
 
 ---
 
-## 1. The CLAUDE.md hierarchy — three levels, clear precedence
+## 1. The CLAUDE.md hierarchy
 
-Claude Code reads configuration from three locations:
+Claude Code reads configuration from multiple scopes (from the [official memory docs](https://code.claude.com/docs/en/memory)):
 
-| Level | Path | Scope |
+| Scope | Path | Notes |
 |---|---|---|
-| **User** | `~/.claude/CLAUDE.md` | Personal preferences. Yours alone. |
-| **Project** | `.claude/CLAUDE.md` (in repo root) | Team standards. Shared via git. |
-| **Directory** | `CLAUDE.md` in any directory | Module/feature-specific rules. |
+| **Managed policy** | `/Library/Application Support/ClaudeCode/CLAUDE.md` (macOS), `/etc/claude-code/CLAUDE.md` (Linux/WSL), `C:\Program Files\ClaudeCode\CLAUDE.md` (Windows) | Org-enforced, cannot be overridden by user settings |
+| **User** | `~/.claude/CLAUDE.md` | Personal, cross-project |
+| **Project** | `./CLAUDE.md` **or** `./.claude/CLAUDE.md` | Team standards, version-controlled |
+| **Local (gitignored)** | `./CLAUDE.local.md` | Per-project personal overrides |
+| **Directory** | `CLAUDE.md` in any subdirectory | Module/feature-specific |
 
-### Precedence — directory beats project beats user
+### How they combine — concatenation, not override
 
-```
-directory  >  project  >  user
-```
+This is a common misconception. Files are **concatenated** into context, walking from filesystem root down to the current working directory. The doc states: *"More specific locations take precedence over broader ones,"* but stresses *"All discovered files are concatenated into context rather than overriding each other."*
 
-A rule at a deeper level **overrides** the same rule at a higher level. If your user config says "use 4-space indent" and the directory you're working in has a `CLAUDE.md` saying "use 2-space indent", the directory wins.
+Effective behavior:
+
+- More-specific scopes (directory, then project) load **after** broader ones (user, then managed policy)
+- Files later in the chain effectively "win" by recency — the model attends to the most recent instruction
+- Within each directory, `CLAUDE.local.md` is appended after `CLAUDE.md`
+- **All scopes are present in context simultaneously** — nothing is hidden
+
+### What goes where
+
+| Belongs at | Examples |
+|---|---|
+| **User** | Your output style, your tooling, "don't add emojis" |
+| **Project** (`./CLAUDE.md`) | Code style, commit conventions, test requirements |
+| **Local** (`./CLAUDE.local.md`) | Your personal notes for this project — **gitignored** |
+| **Directory** | Module-specific overrides — "this folder uses 2-space indent", "legacy code, don't refactor" |
+
+> **Exam rule (per claudecertifications.com source):** Personal preferences in project-level config = wrong. Team standards in user-level config = wrong. Match scope to audience. The source uses simplified "directory > project > user" precedence; the actual mechanism is concatenation with "more specific wins effectively." Both framings give the same right answer on exam questions.
 
 ### What goes where — the right answer is almost always "the most specific level"
 
@@ -92,6 +108,8 @@ This rule applies only to files matching the globs. Useful for module-specific c
 ---
 
 ## 3. Commands vs skills
+
+> **Important context:** per [the official skills docs](https://code.claude.com/docs/en/skills), custom commands have been **merged into skills** — `.claude/commands/deploy.md` and `.claude/skills/deploy/SKILL.md` both create `/deploy`. If both exist with the same name, **the skill wins**. Skills are now the recommended form. The exam still tests both because the conceptual distinction (current-session vs forked-context) is what matters.
 
 ### Commands (`.claude/commands/`)
 

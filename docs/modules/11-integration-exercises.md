@@ -146,18 +146,18 @@ Build a CI workflow that:
 
 ---
 
-## Practice Exam 1 (Full)
+## Where to go from here
 
-After completing all exercises:
+After completing all four exercises:
 
-- [ ] Take Full Practice Exam 1 (50 questions, all 6 scenarios) on the source site
-- [ ] Score: ___ / 50
-- [ ] Identify your weakest 2 domains:
-  > _domain 1: ____
-  > _domain 2: ____
+- [ ] Take any Full Practice Exam available on the [source Practice Questions page](https://claudecertifications.com/claude-certified-architect/practice-questions)
+- [ ] Score yourself
+- [ ] Identify your weakest 2 domains and re-read the relevant modules
+- [ ] Drill the [18 anti-patterns](../anti-patterns.md) from memory before scheduling
 
-The next module (12) targets these weak areas.
+For exam logistics (registration, format, language, accommodations), the [official FAQ](https://claudecertifications.com/claude-certified-architect/faq) is the authoritative source.
 
 ---
 
-[Continue to Module 12 — Final Exam Prep :material-arrow-right:](12-final-exam-prep.md){ .md-button .md-button--primary }
+[Drill the 18 anti-patterns :material-arrow-right:](../anti-patterns.md){ .md-button .md-button--primary }
+[Open the quick reference :material-arrow-right:](../quick-reference.md){ .md-button }

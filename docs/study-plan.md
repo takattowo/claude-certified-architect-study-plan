@@ -1,6 +1,6 @@
 # Study Plan — Overview
 
-A 12-module plan across three phases. Source plan = 84 hours over 12 weeks at ~7 hr/wk. Adjust to your pace.
+An 11-module plan across three phases. The source 12-week plan totals ~84 hours at ~7 hr/wk; this site groups the W12 final-prep activities (timed practice exams, anti-pattern recall, logistics) into the [Quick Reference](quick-reference.md) and the source site's own practice questions page rather than a dedicated module.
 
 ## Pacing options
 
@@ -24,7 +24,7 @@ Every module has four parts:
 
 You're done with a module when every checkbox is ticked **and** you can explain the anti-patterns in your own words.
 
-## The 12 modules
+## The 11 modules
 
 ### Phase 1 — Foundations (Modules 1–4)
 
@@ -38,9 +38,9 @@ Claude Code config, CI/CD integration, prompt engineering, validation strategies
 
 [Open Phase 2 :material-arrow-right:](phase-2-applied.md){ .md-button }
 
-### Phase 3 — Exam Prep (Modules 9–12)
+### Phase 3 — Mastery (Modules 9–11)
 
-Context management, provenance, hands-on integration, full-length practice exams.
+Context management, provenance, end-to-end integration exercises.
 
 [Open Phase 3 :material-arrow-right:](phase-3-exam-prep.md){ .md-button }
 
@@ -50,10 +50,10 @@ Use these as milestones. Tick them as you complete each phase.
 
 - [ ] Phase 1 complete (Modules 1–4)
 - [ ] Phase 2 complete (Modules 5–8)
-- [ ] Phase 3 complete (Modules 9–12)
+- [ ] Phase 3 complete (Modules 9–11)
 - [ ] All 18 anti-patterns memorized
 - [ ] All 6 scenarios mastered
-- [ ] Practice Tests 1–10: each ≥80%
-- [ ] Full Practice Exams 1–3: each ≥80%
-- [ ] Exam registered on Skilljar
+- [ ] Practice Tests 1–10 (one per module 1–10): each ≥80%
+- [ ] All four hands-on integration exercises (Module 11) shipped
+- [ ] Exam registered on Skilljar (logistics: see [official FAQ](https://claudecertifications.com/claude-certified-architect/faq))
 - [ ] Exam passed (≥720 / 1000)

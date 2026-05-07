@@ -163,32 +163,43 @@ Total tools across the system: many. Tools per agent: 3–4. Selection stays sha
 
 ### `tool_choice` parameter
 
-Three values, three behaviors:
+Four values per the [official docs](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools):
 
 | Value | Behavior | Use when |
 |---|---|---|
-| `'auto'` | Model decides whether to use any tool | Default. Open-ended task. |
-| `'any'` | Model **must** use a tool | The task definitely requires a tool call (e.g. "look up X") |
-| Forced specific tool | Model must use that specific tool | Structured extraction (Module 7) |
+| `{"type": "auto"}` | Model decides whether to use any tool | Default when tools are provided. Open-ended task. |
+| `{"type": "any"}` | Model **must** use a tool, picks which | Task definitely requires a tool call (e.g. "look up X") |
+| `{"type": "tool", "name": "X"}` | Model must use tool X | Structured extraction (Module 7) |
+| `{"type": "none"}` | Model **cannot** use any tool | Default when no tools provided; or to suppress tool use mid-conversation |
 
-> **Exam rule:** When the task is to extract structured data, force a specific tool. When the task is open-ended, leave it on `'auto'`.
+**Compatibility note:** with extended thinking, only `auto` and `none` are supported. `any` and forced-tool will return a 400.
+
+> **Exam rule:** When the task is to extract structured data, force a specific tool. When the task is open-ended, leave it on `auto`.
 
 ---
 
 ## 4. MCP configuration
 
-### `.mcp.json` (project) vs `~/.claude.json` (user)
+### MCP server scopes — three levels (from [official docs](https://code.claude.com/docs/en/mcp))
 
-| File | Scope | Committed? |
+| Scope | Stored in | Shared with team |
 |---|---|---|
-| `.mcp.json` (in repo root) | Project — shared with team | Yes, version-controlled |
-| `~/.claude.json` | User — personal | No, never |
+| **Local** | `~/.claude.json` (default; project-bound) | No |
+| **Project** | `.mcp.json` in project root | **Yes** — commit it |
+| **User** | `~/.claude.json` (cross-project) | No |
 
-Project-level config: tools the whole team needs. User-level config: your personal extras (your own scratchpad MCP, your favorite linter integration, etc).
+**Precedence:** Local > Project > User > Plugin > claude.ai connectors.
 
-### Secrets — `${ENV_VAR}` expansion
+Project-level (`.mcp.json`) is the team-shared config. Local and User scopes both live in `~/.claude.json` — Local is per-project, User is global across all your projects.
 
-**Always.** Never hardcode.
+### Secrets — env-var expansion
+
+**Always.** Never hardcode. Two forms supported:
+
+- `${VAR}` — expands to the value of `VAR`
+- `${VAR:-default}` — expands to `VAR` if set, otherwise to `default`
+
+Expansion works in `command`, `args`, `env`, `url`, and `headers`. Plain `$VAR` is **not** supported. If a required var is unset and has no default, parsing fails.
 
 ✅ Right:
 

@@ -41,14 +41,19 @@ The model decides when it's done. Your code only **observes** that decision via 
 
 ## 2. `stop_reason` — the only field that matters for control flow
 
-Every Claude response has a `stop_reason`. The exam-relevant values:
+Every Claude response has a `stop_reason`. The full set of values per the [official Messages API docs](https://platform.claude.com/docs/en/api/handling-stop-reasons):
 
 | Value | Meaning | What your loop does |
 |---|---|---|
 | `"tool_use"` | Claude asked to run a tool | Execute the tool, append the result, send back. **Continue loop.** |
-| `"end_turn"` | Claude is done with this turn | **Exit loop.** Return the final text to the user. |
-| `"max_tokens"` | Hit output token limit mid-response | Either retry with more tokens, or treat as failure. Don't pretend it's complete. |
+| `"end_turn"` | Claude is done with this turn | **Exit loop.** Return the final text. |
+| `"max_tokens"` | Hit output token limit mid-response | Treat as truncation. Either retry with more tokens or surface to caller. |
 | `"stop_sequence"` | Hit a configured stop string | Treat per your policy. |
+| `"pause_turn"` | Server-tool sampling loop hit its iteration limit | Continue if you want more turns; treat as soft pause. |
+| `"refusal"` | Safety filter declined to respond | Don't retry the same prompt. Surface or escalate. |
+| `"model_context_window_exceeded"` | Conversation exceeded the context window | Compact, summarize, or split. Default for Sonnet 4.5+; older models need beta header. |
+
+The two exam-critical values are **`tool_use`** and **`end_turn`** — your loop's continue/stop decision. The others are real values you'll encounter in production but rarely tested directly.
 
 > **Exam rule:** Whenever a question asks "how should the agent decide whether to continue?", the right answer always involves checking `stop_reason`. If an answer choice involves checking text content, counting iterations, or watching token counts as the **primary** signal, it's wrong.
 

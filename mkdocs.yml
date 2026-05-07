@@ -90,12 +90,11 @@ nav:
           - "M6 — Plan Mode, Iteration & CI/CD": modules/06-plan-mode-cicd.md
           - "M7 — Prompt Engineering & Structured Output": modules/07-prompt-engineering.md
           - "M8 — Validation, Batch & Multi-Pass": modules/08-validation-batch-multipass.md
-      - Phase 3 — Exam Prep:
+      - Phase 3 — Mastery:
           - Index: phase-3-exam-prep.md
           - "M9 — Context Management": modules/09-context-management.md
           - "M10 — Advanced Context & Provenance": modules/10-context-provenance.md
           - "M11 — Integration Exercises": modules/11-integration-exercises.md
-          - "M12 — Final Exam Prep": modules/12-final-exam-prep.md
   - Anti-Patterns Cheatsheet: anti-patterns.md
   - 6 Scenarios: scenarios.md
   - Quick Reference: quick-reference.md

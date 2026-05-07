@@ -8,7 +8,7 @@
 
 - The hub-and-spoke pattern and why it beats flat architectures for any non-trivial task
 - How to pass **only** the context each subagent needs — without leaking the coordinator's full history
-- When to use `fork_session` vs `--resume`
+- When to use `--fork-session` vs `--resume`
 - How to spawn parallel subagents in a single turn
 
 By the end, you should be able to design a research/analysis system on a whiteboard in under two minutes.
@@ -94,17 +94,19 @@ To get parallel execution, the coordinator's prompt must encourage it. Without p
 
 ---
 
-## 4. `fork_session` vs `--resume`
+## 4. `--fork-session` vs `--resume`
 
-These are different tools for different jobs.
+Different tools for different jobs.
 
 | Need | Use |
 |---|---|
-| Continue a previous session with all its context preserved | `--resume <session-name>` |
-| Branch off a session to try a parallel exploration without polluting the main thread | `fork_session` |
+| Continue a previous session with all its context preserved | `--resume <session-id>` (alias `-r`) |
+| Branch off a session to try a parallel exploration without polluting the main thread | `claude --resume <id> --fork-session` (CLI) or `/branch` / `/fork` (slash command) |
 | Create a clean named session you'll come back to later | `--session-name <name>` then `--resume` |
 
-**Mental model:** `--resume` is `git checkout`. `fork_session` is `git checkout -b`. The forked session inherits the starting context but diverges from the main one going forward.
+**Mental model:** `--resume` is `git checkout`. `--fork-session` is `git checkout -b`. The forked session inherits the starting context but diverges from the main one going forward.
+
+> **Note on naming:** the CLI flag is `--fork-session` (hyphens). Some study materials and older docs use `fork_session` (underscore) as a conceptual name; the actual flag is hyphenated.
 
 ---
 

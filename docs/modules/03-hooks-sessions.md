@@ -53,7 +53,15 @@ Now the rule is enforced 100% of the time. The model can't bypass it even if it 
 
 ---
 
-## 2. PreToolUse vs PostToolUse
+## 2. The hook event catalog
+
+Claude Code emits many events you can hook into. The two the exam tests heavily are `PreToolUse` and `PostToolUse`. The full list (from the [official hooks docs](https://code.claude.com/docs/en/hooks)) includes:
+
+| Lifecycle | Tool | Prompt | Subagent | Compaction | Files & Worktrees | Misc |
+|---|---|---|---|---|---|---|
+| `SessionStart`, `Setup`, `SessionEnd` | `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `PostToolBatch`, `PermissionRequest`, `PermissionDenied` | `UserPromptSubmit`, `UserPromptExpansion`, `InstructionsLoaded` | `SubagentStart`, `SubagentStop`, `TaskCreated`, `TaskCompleted` | `PreCompact`, `PostCompact` | `FileChanged`, `WorktreeCreate`, `WorktreeRemove`, `CwdChanged` | `Stop`, `StopFailure`, `Notification`, `TeammateIdle`, `ConfigChange`, `Elicitation`, `ElicitationResult` |
+
+Most production work needs `PreToolUse`, `PostToolUse`, `UserPromptSubmit`, `Stop`, and `SessionStart`. Knowing the full catalog is useful but the exam focuses on `PreToolUse` / `PostToolUse`.
 
 ### PreToolUse — fires **before** the tool executes
 

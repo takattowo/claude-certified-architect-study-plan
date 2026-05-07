@@ -1,17 +1,18 @@
-# Phase 3 — Exam Prep (Modules 9–12)
+# Phase 3 — Mastery (Modules 9–11)
 
-Focus: context management, provenance, integration exercises, full-length practice exams.
+Focus: context management, provenance, end-to-end integration exercises.
 
 By the end of Phase 3 you should be able to:
 
 - Build a context-stable agent that survives multi-turn conversation without losing critical facts
 - Tag every multi-agent claim with full provenance metadata
 - Execute four end-to-end integration exercises mapping to all 6 exam scenarios
-- Pass three timed practice exams at ≥80% before scheduling the real one
+
+For practice exams and exam-day logistics, use the source site's [Practice Questions page](https://claudecertifications.com/claude-certified-architect/practice-questions) and the [official FAQ](https://claudecertifications.com/claude-certified-architect/faq) — those are the authoritative, up-to-date sources for exam policy.
 
 ---
 
-## The four modules
+## The three modules
 
 <div class="grid cards" markdown>
 
@@ -35,17 +36,9 @@ By the end of Phase 3 you should be able to:
 
     ---
 
-    Four end-to-end mini-projects mapping to all 6 exam scenarios: customer support agent, Claude Code config + skill, multi-agent research bot with provenance, CI/CD pipeline. Followed by Practice Exam 1.
+    Four end-to-end mini-projects mapping to all 6 exam scenarios: customer support agent, Claude Code config + skill, multi-agent research bot with provenance, CI/CD pipeline.
 
     [Open Module 11 :material-arrow-right:](modules/11-integration-exercises.md)
-
--   :material-numeric-1-circle: :material-numeric-2-circle: **Final Exam Prep**
-
-    ---
-
-    Targeted weak-area review. Anti-pattern recall from memory. Three timed practice exams. Logistics: registration, scheduling, day-of routine. Final readiness gate.
-
-    [Open Module 12 :material-arrow-right:](modules/12-final-exam-prep.md)
 
 </div>
 
@@ -56,9 +49,8 @@ By the end of Phase 3 you should be able to:
 - [ ] Module 9 complete (Practice Test 9 ≥ 8/10)
 - [ ] Module 10 complete (Practice Test 10 ≥ 8/10)
 - [ ] Module 11 — all four exercises shipped
-- [ ] Practice Exam 1 ≥ 80%
-- [ ] Module 12 — Practice Exams 2 and 3 each ≥ 80%
-- [ ] Final readiness gate passed (every box in Module 12 section 7)
+- [ ] All 18 anti-patterns recallable from memory
+- [ ] All 6 scenarios: every architectural decision recallable
 
 ---
 
