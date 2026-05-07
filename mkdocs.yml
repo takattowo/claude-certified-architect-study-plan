@@ -1,0 +1,89 @@
+site_name: Claude Certified Architect — Foundations Study Plan
+site_description: Open, forkable study plan for Anthropic's Claude Certified Architect (Foundations) exam. 12 modules, 18 anti-patterns, 6 scenarios.
+site_url: https://takattowo.github.io/claude-certified-architect-study-plan/
+repo_url: https://github.com/takattowo/claude-certified-architect-study-plan
+repo_name: claude-certified-architect-study-plan
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Exam Overview: exam-overview.md
+  - Study Plan:
+      - Overview: study-plan.md
+      - Phase 1 — Foundations: phase-1-foundations.md
+      - Phase 2 — Applied: phase-2-applied.md
+      - Phase 3 — Exam Prep: phase-3-exam-prep.md
+  - Anti-Patterns Cheatsheet: anti-patterns.md
+  - 6 Scenarios: scenarios.md
+  - Quick Reference: quick-reference.md
+  - Contributing: contributing.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/takattowo/claude-certified-architect-study-plan
+  generator: false
+
+copyright: Content licensed under CC BY 4.0. Source compiled from claudecertifications.com.
