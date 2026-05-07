@@ -27,7 +27,7 @@ By the end of Phase 1 you should be able to:
 
     ---
 
-    Hub-and-spoke pattern. Context isolation. Parallel `Task` dispatch. `fork_session` vs `--resume`. Hands-on: build a coordinator dispatching parallel subagents.
+    Hub-and-spoke pattern. Context isolation. Parallel `Task` dispatch. `--fork-session` vs `--resume`. Hands-on: build a coordinator dispatching parallel subagents.
 
     [Open Module 2 :material-arrow-right:](modules/02-multi-agent.md)
 

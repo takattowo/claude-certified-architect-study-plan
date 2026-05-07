@@ -115,10 +115,19 @@ Now your CI script can parse with `jq` instead of regex'ing prose.
 
 ### `--json-schema`
 
-Force the output to match a specific JSON schema:
+Force the output to match a specific JSON schema. Per the [official CLI reference](https://code.claude.com/docs/en/cli-reference) the flag accepts an **inline JSON Schema string** (print mode only):
 
 ```bash
-claude -p "Find security issues" --json-schema schema.json
+claude -p \
+  --json-schema '{"type":"object","properties":{"issues":{"type":"array"}},"required":["issues"]}' \
+  "Find security issues in src/"
+```
+
+For larger schemas, store the JSON in a shell variable or file and pass via command substitution:
+
+```bash
+SCHEMA="$(cat schema.json)"
+claude -p --json-schema "$SCHEMA" "Find security issues"
 ```
 
 Output is guaranteed to match the schema. Combined with `tool_use` (Module 7), this is the right way to get structured data.
@@ -134,9 +143,12 @@ Output is guaranteed to match the schema. Combined with `tool_use` (Module 7), t
 
 - name: Review code (SEPARATE session)
   run: |
-    claude -p "Review the diff in /tmp/diff.patch for bugs. Output JSON." \
-      --json-schema review-schema.json \
-      --output-format json > review.json
+    SCHEMA="$(cat review-schema.json)"
+    claude -p \
+      --json-schema "$SCHEMA" \
+      --output-format json \
+      "Review the diff in /tmp/diff.patch for bugs. Output JSON." \
+      > review.json
 ```
 
 Note: the review happens in a **separate session**. Critical (next section).
@@ -250,9 +262,12 @@ Add a CI step that runs Claude on a file and parses structured output:
 ```yaml
 - name: Lint with Claude
   run: |
-    claude -p "Check src/api/handler.ts for unhandled error paths. Output JSON." \
-      --json-schema .github/schemas/lint.json \
-      --output-format json > lint.json
+    SCHEMA="$(cat .github/schemas/lint.json)"
+    claude -p \
+      --json-schema "$SCHEMA" \
+      --output-format json \
+      "Check src/api/handler.ts for unhandled error paths. Output JSON." \
+      > lint.json
     jq '.issues' lint.json
 ```
 

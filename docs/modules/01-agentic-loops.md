@@ -221,6 +221,8 @@ if turn == MAX_SAFETY_TURNS - 1:
     raise AgentLoopExceeded(...)
 ```
 
+In Claude Code's print mode this safety cap is also exposed as a CLI flag: `--max-turns N` (per the [official CLI reference](https://code.claude.com/docs/en/cli-reference)) — exits with an error when the limit is reached. Use it as a guardrail for unattended runs.
+
 ---
 
 ## 5. Best practices

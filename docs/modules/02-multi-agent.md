@@ -102,7 +102,7 @@ Different tools for different jobs.
 |---|---|
 | Continue a previous session with all its context preserved | `--resume <session-id>` (alias `-r`) |
 | Branch off a session to try a parallel exploration without polluting the main thread | `claude --resume <id> --fork-session` (CLI) or `/branch` / `/fork` (slash command) |
-| Create a clean named session you'll come back to later | `--session-name <name>` then `--resume` |
+| Create a clean named session you'll come back to later | `--name <name>` (alias `-n`) then `--resume <name>` |
 
 **Mental model:** `--resume` is `git checkout`. `--fork-session` is `git checkout -b`. The forked session inherits the starting context but diverges from the main one going forward.
 

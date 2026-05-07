@@ -9,7 +9,7 @@
 - The deterministic-vs-probabilistic split and why hooks are the answer for critical rules
 - PreToolUse vs PostToolUse — when each fires, what each can do
 - The four valid escalation triggers (and the two invalid ones the exam tries to slip past you)
-- Session ops: `--resume`, `fork_session`, `--session-name`
+- Session ops: `--resume`, `--fork-session`, `--name`
 - Prompt chaining vs dynamic adaptive decomposition
 
 ---
@@ -124,7 +124,7 @@ Continues a previous session **with all its context preserved**. Use when:
 - Picking up a multi-day investigation tomorrow
 - Coming back to a long-running refactor
 
-### `fork_session`
+### `--fork-session` (CLI) / `/branch` or `/fork` (slash command)
 
 Creates a **branch** of the current session. Inherits context up to the fork point, then diverges. Use when:
 
@@ -132,9 +132,13 @@ Creates a **branch** of the current session. Inherits context up to the fork poi
 - Running a parallel hypothesis without polluting the main thread
 - Splitting one investigation into two (e.g. "explore A in this fork, B in another")
 
-### `--session-name <name>`
+Per the [official CLI reference](https://code.claude.com/docs/en/cli-reference): the flag is `--fork-session` (hyphens), used together with `--resume` or `--continue`.
 
-Names a session for later resumption. Use whenever you'll come back to the work. Naming costs nothing; finding an unnamed session later costs hours.
+### `--name <name>` (alias `-n`)
+
+Sets a display name for the session, shown in `/resume` and the terminal title. Resume a named session with `claude --resume <name>`. Naming costs nothing; finding an unnamed session later costs hours.
+
+Per the [official CLI reference](https://code.claude.com/docs/en/cli-reference): the slash command `/rename` changes the name mid-session.
 
 ### Stale context — the long-session problem
 
@@ -148,7 +152,7 @@ In sessions that span hours/days:
 
 - Use `/compact` (Module 10) to compress history
 - Move concrete state to a scratchpad file the agent re-reads each turn
-- For large new sub-tasks, `fork_session` rather than continuing
+- For large new sub-tasks, `--fork-session` rather than continuing
 
 ---
 
@@ -228,7 +232,7 @@ print(json.dumps({"block": False}))
 
 ### Step 3 — sessions
 
-- [ ] Start Claude Code with `--session-name my-test`
+- [ ] Start Claude Code with `--name my-test`
 - [ ] Have a short conversation
 - [ ] Exit, restart with `--resume my-test`, confirm context preserved
 - [ ] In the resumed session, fork: `/fork side-experiment` (or equivalent in your version)
