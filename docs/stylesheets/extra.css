@@ -1,0 +1,48 @@
+/* Progress tracker bar inserted at top of each article */
+.ccaf-progress-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.4rem;
+  background: var(--md-code-bg-color);
+  font-size: 0.8rem;
+}
+
+.ccaf-progress-text {
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+}
+
+.ccaf-reset-btn {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  background: transparent;
+  color: var(--md-default-fg-color);
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.ccaf-reset-btn:hover {
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+  border-color: var(--md-accent-fg-color);
+}
+
+/* Make tasklist checkboxes look clickable now that they are interactive */
+.task-list-item > input[type="checkbox"],
+li > input.task-list-item-checkbox,
+li > input[type="checkbox"]:not([disabled]) {
+  cursor: pointer;
+}
+
+/* Slightly tighter card grid spacing on the home page */
+.grid.cards > :is(ul, ol) > li,
+.grid.cards > .admonition {
+  border-radius: 0.5rem;
+}
