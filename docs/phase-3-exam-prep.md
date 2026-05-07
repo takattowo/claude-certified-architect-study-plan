@@ -57,7 +57,7 @@ By the end of Phase 3 you should be able to:
 - [ ] Module 10 complete (Practice Test 10 ≥ 8/10)
 - [ ] Module 11 — all four exercises shipped
 - [ ] Practice Exam 1 ≥ 80%
-- [ ] Module 12 — Practice Exams 2 + 3 + Final each ≥ 80%
+- [ ] Module 12 — Practice Exams 2 and 3 each ≥ 80%
 - [ ] Final readiness gate passed (every box in Module 12 section 7)
 
 ---

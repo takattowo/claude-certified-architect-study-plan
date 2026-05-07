@@ -88,7 +88,7 @@ When a tool fails, return a structured error so the agent can decide what to do 
 | Field | Type | Purpose |
 |---|---|---|
 | `isError` | bool | Was this an error or a normal result? |
-| `errorCategory` | string enum | Classification: `auth`, `not_found`, `rate_limit`, `timeout`, `validation`, `internal` |
+| `errorCategory` | string enum | Classification: `auth`, `not_found`, `rate_limit`, `timeout`, `validation` |
 | `isRetryable` | bool | Should the agent retry, or escalate/give up? |
 | `context` | object | What was attempted, what failed, any details that help the agent decide next steps |
 
@@ -304,7 +304,7 @@ def search_customers(query: str, include_inactive: bool = False) -> dict:
         }
 ```
 
-- [ ] All four error categories produce the right shape
+- [ ] At least 4 of the 5 error categories produce the right shape
 - [ ] Empty results return `isError: false` (not `true`)
 - [ ] Access failures are clearly distinguishable from empty results
 
@@ -313,7 +313,7 @@ def search_customers(query: str, include_inactive: bool = False) -> dict:
 Run the agent with two inputs:
 
 1. A query that legitimately matches nothing → expect `{isError: false, results: []}`
-2. A query while the DB is down → expect `{isError: true, errorCategory: "internal", ...}`
+2. A query while the DB is down → expect `{isError: true, errorCategory: "timeout", ...}` (or whichever of the 5 categories fits the failure mode)
 
 - [ ] Agent's downstream behavior differs between the two (it should — one says "no customer found", the other says "I couldn't check, escalating")
 

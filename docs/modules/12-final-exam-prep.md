@@ -71,7 +71,7 @@ This is the highest-leverage hour you can spend before exam day. Most exam quest
 
 ## 3. Timed practice exams
 
-Three full-length practice exams, taken in real exam conditions:
+Two full-length practice exams in W12 (per the 12-week source plan), plus the Module-11 Practice Exam 1 you already took. All taken in real exam conditions.
 
 ### Practice Exam 2 (timed)
 
@@ -85,16 +85,11 @@ Three full-length practice exams, taken in real exam conditions:
 - [ ] Same conditions
 - [ ] Score: ___ / 50
 
-### Final Practice Exam (timed)
-
-- [ ] Same conditions
-- [ ] Score: ___ / 50
-
 ### Readiness criteria
 
 You're ready when:
 
-- All three timed exams ≥ 80%
+- All three exams (Module 11's Exam 1 + Module 12's Exams 2 and 3) ≥ 80%
 - No domain consistently below 75%
 - You can recall all 18 anti-patterns from memory
 - You can describe all 6 scenarios' decision points
@@ -176,7 +171,7 @@ Do not schedule the exam until **all** boxes below are checked.
 - [ ] All 18 anti-patterns recallable from memory
 - [ ] All 6 scenarios: every decision + anti-pattern recallable
 - [ ] Practice Tests 1–10: each ≥ 80%
-- [ ] Full Practice Exams 2 + 3 + Final: each ≥ 80% (target ≥ 85% for safety vs 720/1000 cutoff)
+- [ ] Full Practice Exams 1, 2, 3: each ≥ 80% (target ≥ 85% for safety vs 720/1000 cutoff)
 - [ ] Hands-on exercises A–D from Module 11 shipped
 - [ ] One full sleep before exam day
 
