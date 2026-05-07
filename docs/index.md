@@ -11,6 +11,14 @@ Open, forkable study plan for Anthropic's **Claude Certified Architect (Foundati
 [Get started :material-arrow-right:](study-plan.md){ .md-button .md-button--primary }
 [View on GitHub :fontawesome-brands-github:](https://github.com/takattowo/claude-certified-architect-study-plan){ .md-button }
 
+<div class="ccaf-gh-buttons" markdown="0">
+  <a class="github-button" href="https://github.com/takattowo/claude-certified-architect-study-plan" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star takattowo/claude-certified-architect-study-plan on GitHub">Star</a>
+  <a class="github-button" href="https://github.com/takattowo/claude-certified-architect-study-plan/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork takattowo/claude-certified-architect-study-plan on GitHub">Fork</a>
+  <a class="github-button" href="https://github.com/takattowo/claude-certified-architect-study-plan/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch takattowo/claude-certified-architect-study-plan on GitHub">Watch</a>
+  <a class="github-button" href="https://github.com/takattowo/claude-certified-architect-study-plan/issues" data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue takattowo/claude-certified-architect-study-plan on GitHub">Issues</a>
+</div>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
 ---
 
 ## What you get

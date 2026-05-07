@@ -78,9 +78,24 @@ nav:
   - Exam Overview: exam-overview.md
   - Study Plan:
       - Overview: study-plan.md
-      - Phase 1 — Foundations: phase-1-foundations.md
-      - Phase 2 — Applied: phase-2-applied.md
-      - Phase 3 — Exam Prep: phase-3-exam-prep.md
+      - Phase 1 — Foundations:
+          - Index: phase-1-foundations.md
+          - "M1 — Agentic Loops & Core API": modules/01-agentic-loops.md
+          - "M2 — Multi-Agent Orchestration": modules/02-multi-agent.md
+          - "M3 — Hooks, Workflows & Sessions": modules/03-hooks-sessions.md
+          - "M4 — Tool Design & MCP": modules/04-tool-design-mcp.md
+      - Phase 2 — Applied:
+          - Index: phase-2-applied.md
+          - "M5 — Claude Code Configuration": modules/05-claude-code-config.md
+          - "M6 — Plan Mode, Iteration & CI/CD": modules/06-plan-mode-cicd.md
+          - "M7 — Prompt Engineering & Structured Output": modules/07-prompt-engineering.md
+          - "M8 — Validation, Batch & Multi-Pass": modules/08-validation-batch-multipass.md
+      - Phase 3 — Exam Prep:
+          - Index: phase-3-exam-prep.md
+          - "M9 — Context Management": modules/09-context-management.md
+          - "M10 — Advanced Context & Provenance": modules/10-context-provenance.md
+          - "M11 — Integration Exercises": modules/11-integration-exercises.md
+          - "M12 — Final Exam Prep": modules/12-final-exam-prep.md
   - Anti-Patterns Cheatsheet: anti-patterns.md
   - 6 Scenarios: scenarios.md
   - Quick Reference: quick-reference.md
