@@ -647,16 +647,17 @@
   color: var(--md-primary-fg-color) !important;
   font-weight: 700 !important;
   position: relative;
+  padding-left: 1rem !important;
 }
 .md-nav__link--active::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 20%;
-  bottom: 20%;
+  left: 0.3rem;
+  top: 22%;
+  bottom: 22%;
   width: 3px;
   background: var(--md-primary-fg-color);
-  border-radius: 0 3px 3px 0;
+  border-radius: 3px;
 }
 
 /* Indent guide for nested module list */
