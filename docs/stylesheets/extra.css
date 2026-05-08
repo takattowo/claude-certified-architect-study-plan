@@ -566,6 +566,143 @@
   }
 }
 
+/* =========================================================================
+   Sidebar (left nav) polish
+   ========================================================================= */
+
+/* Sidebar container: lighter border, breathable */
+.md-sidebar--primary {
+  padding-top: 0.6rem;
+}
+.md-sidebar__scrollwrap {
+  scrollbar-width: thin;
+}
+
+/* Top-level sections (Study Plan, etc.) — render as eyebrow labels */
+.md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link,
+.md-nav--primary > .md-nav__list > .md-nav__item--section > label.md-nav__link {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  padding: 1.1rem 0.75rem 0.4rem;
+  cursor: default;
+  opacity: 0.85;
+}
+
+/* Top-level non-section items (Home, Exam Overview, Anti-Patterns…) */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  margin: 0.1rem 0.4rem;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link:hover {
+  background: var(--md-code-bg-color);
+  color: var(--md-primary-fg-color);
+}
+
+/* Phase sub-sections (Phase 1 · Foundations…) — chip-like header */
+.md-nav__item--nested .md-nav__item--nested > nav > label.md-nav__link,
+.md-nav__item--nested .md-nav__item--nested > nav > .md-nav__link {
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--md-primary-fg-color);
+  padding: 0.7rem 0.75rem 0.35rem;
+  margin-top: 0.4rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+.md-nav__item--nested .md-nav__item--nested:first-child > nav > label.md-nav__link {
+  border-top: none;
+  margin-top: 0;
+}
+
+/* Module rows inside phase groups */
+.md-nav__item--nested .md-nav__item--nested .md-nav__item .md-nav__link {
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  margin: 0.05rem 0.4rem;
+  border-radius: 8px;
+  color: var(--md-default-fg-color--light);
+  position: relative;
+  line-height: 1.35;
+  transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease;
+}
+.md-nav__item--nested .md-nav__item--nested .md-nav__item .md-nav__link:hover {
+  background: var(--md-code-bg-color);
+  color: var(--md-primary-fg-color);
+  transform: translateX(2px);
+}
+
+/* Active item — accent bar + tinted background */
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  background: var(--ccaf-chip-bg) !important;
+  color: var(--md-primary-fg-color) !important;
+  font-weight: 700 !important;
+  position: relative;
+}
+.md-nav__link--active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  bottom: 20%;
+  width: 3px;
+  background: var(--md-primary-fg-color);
+  border-radius: 0 3px 3px 0;
+}
+
+/* Indent guide for nested module list */
+.md-nav__item--nested .md-nav__item--nested > nav > .md-nav__list {
+  border-left: 1px dashed var(--md-default-fg-color--lightest);
+  margin-left: 0.6rem;
+  padding-left: 0.3rem;
+}
+
+/* Hide redundant arrow icon clutter on collapsed sections */
+.md-nav__item--section > .md-nav__toggle ~ .md-nav__link .md-nav__icon::after {
+  opacity: 0.5;
+}
+
+/* Sidebar title (mobile drawer header) */
+.md-sidebar--primary .md-nav__title {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Right TOC sidebar — same restraint */
+.md-sidebar--secondary .md-nav__title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  padding: 0.6rem 0.75rem;
+}
+.md-sidebar--secondary .md-nav__link {
+  font-size: 0.76rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  margin: 0.05rem 0.3rem;
+  line-height: 1.4;
+  border-left: none;
+}
+.md-sidebar--secondary .md-nav__link:hover {
+  background: var(--md-code-bg-color);
+  color: var(--md-primary-fg-color);
+}
+.md-sidebar--secondary .md-nav__link--active {
+  background: transparent !important;
+  color: var(--md-primary-fg-color) !important;
+}
+
 /* ---------- Mobile tuning ---------------------------------------------- */
 @media screen and (max-width: 44.9em) {
   .ccaf-hero {
