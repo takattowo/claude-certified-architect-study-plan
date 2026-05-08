@@ -1,6 +1,17 @@
-# Exam Overview
+<div class="ccaf-section-head" markdown>
+<span class="ccaf-eyebrow">Exam reference</span>
+# Claude Certified Architect — Foundations
+<p>
+Quick facts: format, weights, scenarios, and the rules that decide most exam questions.
+</p>
 
-Quick facts for the **Claude Certified Architect — Foundations** exam.
+<div class="ccaf-chip-row" markdown="0">
+  <span class="ccaf-chip">Multiple choice</span>
+  <span class="ccaf-chip ccaf-chip--domain">5 domains</span>
+  <span class="ccaf-chip ccaf-chip--time">720 / 1000 to pass</span>
+  <span class="ccaf-chip ccaf-chip--level">Foundations</span>
+</div>
+</div>
 
 ## At a glance
 

@@ -1,7 +1,10 @@
 # Module 2 — Multi-Agent Orchestration
 
-<div class="ccaf-module-meta" markdown>
-**Domain:** D1.2 (Agentic Architecture) · **Weight:** part of ~25% · **Time budget:** 5–7 hr
+<div class="ccaf-module-meta" markdown="0">
+  <span class="ccaf-chip ccaf-chip--domain">D1.2 · Agentic Architecture</span>
+  <span class="ccaf-chip">Weight: part of ~25%</span>
+  <span class="ccaf-chip ccaf-chip--time">5–7 hr</span>
+  <span class="ccaf-chip ccaf-chip--level">Foundations</span>
 </div>
 
 ## What you'll learn

@@ -1,7 +1,10 @@
 # Module 1 — Agentic Loops & Core API
 
-<div class="ccaf-module-meta" markdown>
-**Domain:** D1.1 (Agentic Architecture) · **Weight on exam:** part of ~25% · **Time budget:** 4–6 hr
+<div class="ccaf-module-meta" markdown="0">
+  <span class="ccaf-chip ccaf-chip--domain">D1.1 · Agentic Architecture</span>
+  <span class="ccaf-chip">Weight: part of ~25%</span>
+  <span class="ccaf-chip ccaf-chip--time">4–6 hr</span>
+  <span class="ccaf-chip ccaf-chip--level">Foundations</span>
 </div>
 
 ## What you'll learn

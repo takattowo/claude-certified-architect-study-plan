@@ -1,8 +1,16 @@
-# 6 Scenario Walkthroughs
+<div class="ccaf-section-head" markdown>
+<span class="ccaf-eyebrow">Scenario walkthroughs</span>
+# Six scenarios. Four on your exam.
+<p>
+The exam draws <strong>4 of 6</strong> scenarios at random per attempt — master all six. For each one, learn the correct approach <em>and</em> the anti-pattern for every architectural decision. <a href="https://claudecertifications.com/claude-certified-architect/scenario-walkthroughs">Source page</a>.
+</p>
 
-The exam draws **4 of 6** scenarios at random per attempt. Master all six. For each one, master the correct approach **and** the anti-pattern for every architectural decision.
-
-**Source:** [Scenario Walkthroughs](https://claudecertifications.com/claude-certified-architect/scenario-walkthroughs)
+<div class="ccaf-chip-row" markdown="0">
+  <span class="ccaf-chip">6 scenarios</span>
+  <span class="ccaf-chip ccaf-chip--critical">Master all 6</span>
+  <span class="ccaf-chip ccaf-chip--time">~3 hr drill</span>
+</div>
+</div>
 
 ---
 

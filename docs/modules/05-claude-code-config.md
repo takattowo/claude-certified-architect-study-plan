@@ -1,7 +1,10 @@
 # Module 5 — Claude Code Configuration
 
-<div class="ccaf-module-meta" markdown>
-**Domains:** D3.1 + D3.2 · **Weight:** part of ~20% · **Time budget:** 4–6 hr
+<div class="ccaf-module-meta" markdown="0">
+  <span class="ccaf-chip ccaf-chip--domain">D3.1 + D3.2 · Claude Code Config</span>
+  <span class="ccaf-chip">Weight: part of ~20%</span>
+  <span class="ccaf-chip ccaf-chip--time">4–6 hr</span>
+  <span class="ccaf-chip ccaf-chip--level">Applied</span>
 </div>
 
 ## What you'll learn

@@ -1,7 +1,10 @@
 # Module 7 — Prompt Engineering & Structured Output
 
-<div class="ccaf-module-meta" markdown>
-**Domain:** D4 (full) · **Weight:** ~20% · **Time budget:** 5–7 hr
+<div class="ccaf-module-meta" markdown="0">
+  <span class="ccaf-chip ccaf-chip--domain">D4 · Prompt Engineering</span>
+  <span class="ccaf-chip">Weight: ~20%</span>
+  <span class="ccaf-chip ccaf-chip--time">5–7 hr</span>
+  <span class="ccaf-chip ccaf-chip--level">Applied</span>
 </div>
 
 ## What you'll learn

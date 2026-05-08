@@ -1,7 +1,10 @@
 # Module 9 — Context Management
 
-<div class="ccaf-module-meta" markdown>
-**Domains:** D5.1 + D5.2 · **Weight:** part of ~15% · **Time budget:** 4–6 hr
+<div class="ccaf-module-meta" markdown="0">
+  <span class="ccaf-chip ccaf-chip--domain">D5.1 + D5.2 · Context & Reliability</span>
+  <span class="ccaf-chip">Weight: part of ~15%</span>
+  <span class="ccaf-chip ccaf-chip--time">4–6 hr</span>
+  <span class="ccaf-chip ccaf-chip--level">Mastery</span>
 </div>
 
 ## What you'll learn

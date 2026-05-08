@@ -1,7 +1,10 @@
 # Module 6 — Plan Mode, Iteration & CI/CD
 
-<div class="ccaf-module-meta" markdown>
-**Domains:** D3.3 + D3.4 · **Weight:** part of ~20% · **Time budget:** 5–7 hr
+<div class="ccaf-module-meta" markdown="0">
+  <span class="ccaf-chip ccaf-chip--domain">D3.3 + D3.4 · Claude Code Config</span>
+  <span class="ccaf-chip">Weight: part of ~20%</span>
+  <span class="ccaf-chip ccaf-chip--time">5–7 hr</span>
+  <span class="ccaf-chip ccaf-chip--level">Applied</span>
 </div>
 
 ## What you'll learn

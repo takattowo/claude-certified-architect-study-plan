@@ -1,7 +1,10 @@
 # Module 8 — Validation, Batch & Multi-Pass
 
-<div class="ccaf-module-meta" markdown>
-**Domains:** D3.4 + D4.4 (deep) · **Weight:** part of ~20% · **Time budget:** 5–7 hr
+<div class="ccaf-module-meta" markdown="0">
+  <span class="ccaf-chip ccaf-chip--domain">D3.4 + D4.4 · Validation deep-dive</span>
+  <span class="ccaf-chip">Weight: part of ~20%</span>
+  <span class="ccaf-chip ccaf-chip--time">5–7 hr</span>
+  <span class="ccaf-chip ccaf-chip--level">Applied</span>
 </div>
 
 ## What you'll learn

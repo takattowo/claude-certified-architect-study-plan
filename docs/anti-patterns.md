@@ -1,8 +1,16 @@
-# Anti-Patterns Cheatsheet
+<div class="ccaf-section-head" markdown>
+<span class="ccaf-eyebrow">Cheatsheet</span>
+# 18 anti-patterns to memorize
+<p>
+All eighteen anti-patterns the exam tests, grouped by domain. Memorize each one's wrong-vs-right pair — most distractors map directly to one of these. <a href="https://claudecertifications.com/claude-certified-architect/anti-patterns">Source page</a>.
+</p>
 
-All 18 anti-patterns the exam tests, grouped by domain. Memorize each one's wrong-vs-right pairing — most distractors map directly to one of these.
-
-**Source:** [Anti-Patterns page](https://claudecertifications.com/claude-certified-architect/anti-patterns)
+<div class="ccaf-chip-row" markdown="0">
+  <span class="ccaf-chip ccaf-chip--critical">9 critical</span>
+  <span class="ccaf-chip">7 high</span>
+  <span class="ccaf-chip ccaf-chip--ghost">2 medium</span>
+</div>
+</div>
 
 !!! tip "How to use"
     Tick the checkbox next to each anti-pattern only when you can:

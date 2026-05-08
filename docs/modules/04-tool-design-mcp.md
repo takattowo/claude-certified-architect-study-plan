@@ -1,7 +1,10 @@
 # Module 4 — Tool Design & MCP Integration
 
-<div class="ccaf-module-meta" markdown>
-**Domain:** D2 (full) · **Weight:** ~20% · **Time budget:** 6–8 hr
+<div class="ccaf-module-meta" markdown="0">
+  <span class="ccaf-chip ccaf-chip--domain">D2 · Tool Design & MCP</span>
+  <span class="ccaf-chip">Weight: ~20%</span>
+  <span class="ccaf-chip ccaf-chip--time">6–8 hr</span>
+  <span class="ccaf-chip ccaf-chip--level">Foundations</span>
 </div>
 
 ## What you'll learn

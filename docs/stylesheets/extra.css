@@ -1,73 +1,584 @@
-/* Progress tracker bar inserted at top of each article */
+/* =========================================================================
+   Modern, AWS-Skill-Builder-inspired styling for the CCAF study plan site.
+   Layered on top of MkDocs Material. Components, not page-by-page hacks.
+   ========================================================================= */
+
+/* ---------- Brand tokens (works in both light & dark Material schemes) ---- */
+:root {
+  --ccaf-radius-lg: 14px;
+  --ccaf-radius-md: 10px;
+  --ccaf-radius-sm: 6px;
+  --ccaf-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --ccaf-shadow-md: 0 4px 12px rgba(67, 30, 130, 0.08), 0 2px 4px rgba(67, 30, 130, 0.05);
+  --ccaf-shadow-lg: 0 12px 32px rgba(67, 30, 130, 0.12), 0 4px 8px rgba(67, 30, 130, 0.06);
+  --ccaf-grad-hero: linear-gradient(135deg, #4527a0 0%, #7e57c2 55%, #ffb300 130%);
+  --ccaf-grad-card: linear-gradient(180deg, rgba(126, 87, 194, 0.08) 0%, rgba(126, 87, 194, 0.0) 60%);
+  --ccaf-border: 1px solid var(--md-default-fg-color--lightest);
+  --ccaf-chip-bg: rgba(126, 87, 194, 0.12);
+  --ccaf-chip-fg: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] {
+  --ccaf-grad-hero: linear-gradient(135deg, #311b92 0%, #5e35b1 55%, #ffa000 130%);
+  --ccaf-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --ccaf-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.35);
+  --ccaf-chip-bg: rgba(179, 136, 255, 0.18);
+  --ccaf-chip-fg: #d1c4e9;
+}
+
+/* ---------- Refined typography ------------------------------------------- */
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 2.1rem;
+  margin: 0 0 0.4em;
+  line-height: 1.15;
+}
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2.2em;
+  padding-top: 0.4em;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+.md-typeset h2::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  margin-bottom: 0.5em;
+  background: var(--md-primary-fg-color);
+  border-radius: 3px;
+}
+.md-typeset h3 {
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  margin-top: 1.6em;
+}
+
+/* Tighter paragraph rhythm; more whitespace between blocks */
+.md-typeset p {
+  line-height: 1.65;
+}
+.md-typeset > * + * {
+  margin-top: 0.85em;
+}
+
+/* ---------- Hero banner --------------------------------------------------- */
+.ccaf-hero {
+  position: relative;
+  margin: 0 0 2.4rem;
+  padding: 2.4rem 2rem 2.6rem;
+  border-radius: var(--ccaf-radius-lg);
+  background: var(--ccaf-grad-hero);
+  color: #fff;
+  overflow: hidden;
+  box-shadow: var(--ccaf-shadow-lg);
+}
+.ccaf-hero::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.ccaf-hero-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.ccaf-hero h1,
+.md-typeset .ccaf-hero h1 {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.6rem;
+  line-height: 1.1;
+  border: none;
+}
+.ccaf-hero h1 .headerlink,
+.ccaf-section-head h1 .headerlink {
+  display: none;
+}
+.ccaf-hero h1::before,
+.md-typeset .ccaf-hero h1::before {
+  display: none;
+}
+.ccaf-hero p {
+  margin: 0 0 0.6rem;
+}
+.ccaf-hero-sub {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  max-width: 56ch;
+  opacity: 0.94;
+  margin-bottom: 1.4rem;
+}
+.ccaf-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.4rem;
+}
+.ccaf-hero-meta .ccaf-chip {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.28);
+}
+.ccaf-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.ccaf-hero-cta .md-button {
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.55rem 1.3rem;
+}
+.ccaf-hero-cta .md-button--primary {
+  background: #fff;
+  color: var(--md-primary-fg-color);
+  border-color: #fff;
+}
+.ccaf-hero-cta .md-button--primary:hover {
+  background: #ffb300;
+  color: #000;
+  border-color: #ffb300;
+}
+.ccaf-hero-cta .md-button:not(.md-button--primary) {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+.ccaf-hero-cta .md-button:not(.md-button--primary):hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ---------- Stat tiles ---------------------------------------------------- */
+.ccaf-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.9rem;
+  margin: 0 0 2.4rem;
+}
+.ccaf-stat {
+  padding: 1.2rem 1.1rem;
+  border-radius: var(--ccaf-radius-md);
+  background: var(--md-default-bg-color);
+  border: var(--ccaf-border);
+  box-shadow: var(--ccaf-shadow-sm);
+  text-align: left;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ccaf-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ccaf-shadow-md);
+}
+.ccaf-stat-num {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--md-primary-fg-color);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.ccaf-stat-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.45rem;
+}
+
+/* ---------- Chips / badges ----------------------------------------------- */
+.ccaf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--ccaf-chip-bg);
+  color: var(--ccaf-chip-fg);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.ccaf-chip--time { background: rgba(255, 179, 0, 0.16); color: #b26a00; }
+[data-md-color-scheme="slate"] .ccaf-chip--time { color: #ffd54f; background: rgba(255, 213, 79, 0.14); }
+.ccaf-chip--domain { background: rgba(63, 81, 181, 0.14); color: #283593; }
+[data-md-color-scheme="slate"] .ccaf-chip--domain { color: #9fa8da; background: rgba(159, 168, 218, 0.14); }
+.ccaf-chip--level { background: rgba(0, 150, 136, 0.14); color: #00695c; }
+[data-md-color-scheme="slate"] .ccaf-chip--level { color: #80cbc4; background: rgba(128, 203, 196, 0.14); }
+.ccaf-chip--critical { background: rgba(229, 57, 53, 0.16); color: #b71c1c; }
+[data-md-color-scheme="slate"] .ccaf-chip--critical { color: #ef9a9a; background: rgba(239, 154, 154, 0.14); }
+.ccaf-chip--ghost { background: transparent; border-color: var(--md-default-fg-color--lightest); color: var(--md-default-fg-color--light); }
+
+.ccaf-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.4rem;
+}
+
+/* ---------- Module meta block (pill row at top of module pages) ---------- */
+.ccaf-module-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0;
+  margin: 0 0 1.6rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font-size: 0.85rem;
+}
+.ccaf-module-meta .ccaf-chip strong {
+  font-weight: 700;
+}
+
+/* ---------- Lesson / module preview cards (override Material grid cards) - */
+.md-typeset .grid.cards > ul {
+  gap: 1rem;
+}
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > .admonition {
+  border-radius: var(--ccaf-radius-md);
+  border: var(--ccaf-border);
+  background: var(--md-default-bg-color);
+  box-shadow: var(--ccaf-shadow-sm);
+  padding: 1.4rem 1.3rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.md-typeset .grid.cards > ul > li::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--md-primary-fg-color);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ccaf-shadow-md);
+  border-color: var(--md-primary-fg-color);
+}
+.md-typeset .grid.cards > ul > li:hover::before {
+  opacity: 1;
+}
+.md-typeset .grid.cards > ul > li > p:first-child {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3rem;
+  color: var(--md-default-fg-color);
+}
+.md-typeset .grid.cards > ul > li > p:first-child .twemoji {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: -0.35em;
+  color: var(--md-primary-fg-color);
+  margin-right: 0.35em;
+}
+.md-typeset .grid.cards > ul > li hr {
+  display: none;
+}
+.md-typeset .grid.cards > ul > li > :nth-child(2) {
+  margin-top: 0.4rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.md-typeset .grid.cards > ul > li > p:last-child a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: var(--md-primary-fg-color);
+  margin-top: 0.4rem;
+}
+.md-typeset .grid.cards > ul > li > p:last-child a:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* ---------- Phase / section header card --------------------------------- */
+.ccaf-section-head {
+  margin: 0 0 1.8rem;
+  padding: 1.6rem 1.5rem;
+  border-radius: var(--ccaf-radius-md);
+  border: var(--ccaf-border);
+  background: var(--md-default-bg-color);
+  box-shadow: var(--ccaf-shadow-sm);
+  background-image: var(--ccaf-grad-card);
+}
+.ccaf-section-head h1,
+.md-typeset .ccaf-section-head h1 {
+  margin: 0 0 0.5rem;
+  border: none;
+  padding: 0;
+  font-size: 1.8rem;
+}
+.ccaf-section-head h1::before { display: none; }
+.ccaf-section-head .ccaf-eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.6rem;
+}
+.ccaf-section-head p {
+  color: var(--md-default-fg-color--light);
+  max-width: 70ch;
+  margin: 0 0 0.8rem;
+}
+
+/* ---------- Outcome list (chips with checkmarks) ------------------------- */
+.ccaf-outcomes {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.5rem 1.2rem;
+}
+.md-typeset .ccaf-outcomes li {
+  position: relative;
+  padding-left: 1.7rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .ccaf-outcomes li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 999px;
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ---------- Step / numbered process blocks (used in modules optionally) - */
+.ccaf-steps {
+  counter-reset: ccaf-step;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.6rem;
+  display: grid;
+  gap: 0.7rem;
+}
+.md-typeset .ccaf-steps li {
+  counter-increment: ccaf-step;
+  position: relative;
+  padding: 0.85rem 1rem 0.85rem 3.2rem;
+  border-radius: var(--ccaf-radius-md);
+  background: var(--md-code-bg-color);
+  border: var(--ccaf-border);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+.md-typeset .ccaf-steps li::before {
+  content: counter(ccaf-step);
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 999px;
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Progress tracker (top of articles, populated by JS) ---------- */
 .ccaf-progress-wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
-  padding: 0.6rem 0.9rem;
-  margin-bottom: 1.2rem;
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.4rem;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.6rem;
+  border-radius: var(--ccaf-radius-md);
   background: var(--md-code-bg-color);
-  font-size: 0.8rem;
+  border: var(--ccaf-border);
+  box-shadow: var(--ccaf-shadow-sm);
+  font-size: 0.82rem;
 }
-
 .ccaf-progress-text {
-  font-weight: 600;
-  color: var(--md-default-fg-color--light);
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+  white-space: nowrap;
 }
-
+.ccaf-progress-bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--md-default-fg-color--lightest);
+  overflow: hidden;
+  position: relative;
+}
+.ccaf-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--md-primary-fg-color) 0%, var(--md-accent-fg-color) 100%);
+  width: 0%;
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
 .ccaf-reset-btn {
-  padding: 0.3rem 0.7rem;
+  padding: 0.35rem 0.85rem;
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.3rem;
+  border-radius: 999px;
   background: transparent;
   color: var(--md-default-fg-color);
   cursor: pointer;
-  font-size: 0.75rem;
-  transition: background 0.15s ease, color 0.15s ease;
+  font-size: 0.74rem;
+  font-weight: 600;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
-
 .ccaf-reset-btn:hover {
   background: var(--md-accent-fg-color);
   color: var(--md-accent-bg-color);
   border-color: var(--md-accent-fg-color);
 }
 
-/* Make tasklist checkboxes look clickable now that they are interactive */
+/* ---------- Tasklist polish (clickable, modern look) -------------------- */
 .task-list-item .task-list-control,
 .task-list-item .task-list-indicator,
 .task-list-item input[type="checkbox"] {
   cursor: pointer;
 }
-
-/* Slightly tighter card grid spacing on the home page */
-.grid.cards > :is(ul, ol) > li,
-.grid.cards > .admonition {
-  border-radius: 0.5rem;
+.md-typeset .task-list-item {
+  padding: 0.25rem 0;
+  transition: opacity 0.15s ease;
+}
+.md-typeset .task-list-item:has(input:checked) {
+  opacity: 0.55;
+  text-decoration: line-through;
+  text-decoration-color: var(--md-default-fg-color--lighter);
 }
 
-/* GitHub buttons row */
+/* ---------- Continue / nav buttons -------------------------------------- */
+.md-typeset .md-button {
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.45rem 1.1rem;
+  transition: transform 0.12s ease, box-shadow 0.15s ease;
+}
+.md-typeset .md-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--ccaf-shadow-sm);
+}
+.md-typeset .md-button--primary {
+  box-shadow: var(--ccaf-shadow-sm);
+}
+
+/* ---------- GitHub buttons row ------------------------------------------ */
 .ccaf-gh-buttons {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
   align-items: center;
-  margin: 1rem 0 1.5rem;
+  margin: 0.8rem 0 0;
 }
 
-/* Module deep-dive callouts */
-.ccaf-module-meta {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding: 0.6rem 0.9rem;
-  margin: 0 0 1.2rem;
-  border-left: 3px solid var(--md-accent-fg-color);
-  background: var(--md-code-bg-color);
-  border-radius: 0 0.3rem 0.3rem 0;
-  font-size: 0.85rem;
+/* ---------- Tables: lighter, more breathable ---------------------------- */
+.md-typeset table:not([class]) {
+  border-radius: var(--ccaf-radius-md);
+  overflow: hidden;
+  border: var(--ccaf-border);
+  box-shadow: var(--ccaf-shadow-sm);
+  font-size: 0.88rem;
 }
-.ccaf-module-meta strong {
-  color: var(--md-accent-fg-color);
+.md-typeset table:not([class]) th {
+  background: var(--md-code-bg-color);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  padding: 0.7rem 0.9rem;
+}
+
+/* ---------- Code block container: subtle border, larger radius ---------- */
+.md-typeset pre > code,
+.md-typeset .highlight pre {
+  border-radius: var(--ccaf-radius-md);
+}
+.md-typeset .highlight {
+  border-radius: var(--ccaf-radius-md);
+  box-shadow: var(--ccaf-shadow-sm);
+}
+
+/* ---------- Admonition refinement --------------------------------------- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--ccaf-radius-md);
+  border-left-width: 4px;
+  box-shadow: var(--ccaf-shadow-sm);
+}
+
+/* ---------- Anti-pattern card (used on cheatsheet) ---------------------- */
+.ccaf-ap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0 1.8rem;
+}
+
+/* ---------- Wider content area on big screens (less wall-of-text) ------- */
+@media screen and (min-width: 76.25em) {
+  .md-grid {
+    max-width: 68rem;
+  }
+}
+
+/* ---------- Mobile tuning ---------------------------------------------- */
+@media screen and (max-width: 44.9em) {
+  .ccaf-hero {
+    padding: 1.8rem 1.3rem 2rem;
+  }
+  .ccaf-hero h1,
+  .md-typeset .ccaf-hero h1 {
+    font-size: 1.85rem;
+  }
+  .ccaf-hero-sub {
+    font-size: 0.98rem;
+  }
+  .md-typeset h1 {
+    font-size: 1.7rem;
+  }
 }

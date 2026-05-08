@@ -90,6 +90,13 @@
     text.className = "ccaf-progress-text";
     wrap.appendChild(text);
 
+    const bar = document.createElement("div");
+    bar.className = "ccaf-progress-bar";
+    const fill = document.createElement("div");
+    fill.className = "ccaf-progress-fill";
+    bar.appendChild(fill);
+    wrap.appendChild(bar);
+
     const btn = document.createElement("button");
     btn.className = "ccaf-reset-btn";
     btn.type = "button";
@@ -118,7 +125,12 @@
       text.textContent =
         boxes.length === 0
           ? ""
-          : "Page progress: " + checked + " / " + boxes.length;
+          : "Progress " + checked + " / " + boxes.length;
+    }
+    const fill = document.querySelector(".ccaf-progress-fill");
+    if (fill && boxes.length > 0) {
+      const pct = Math.round((checked / boxes.length) * 100);
+      fill.style.width = pct + "%";
     }
   }
 

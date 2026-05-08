@@ -1,7 +1,10 @@
 # Module 11 — Integration & Hands-On Exercises
 
-<div class="ccaf-module-meta" markdown>
-**Time budget:** 8–12 hr · **Goal:** wire concepts together end-to-end
+<div class="ccaf-module-meta" markdown="0">
+  <span class="ccaf-chip ccaf-chip--domain">All five domains</span>
+  <span class="ccaf-chip">Goal: wire concepts end-to-end</span>
+  <span class="ccaf-chip ccaf-chip--time">8–12 hr</span>
+  <span class="ccaf-chip ccaf-chip--level">Mastery</span>
 </div>
 
 ## What you'll build

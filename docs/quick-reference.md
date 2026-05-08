@@ -1,6 +1,15 @@
-# Quick Reference
+<div class="ccaf-section-head" markdown>
+<span class="ccaf-eyebrow">Day-before review</span>
+# Quick reference
+<p>
+The eighteen "always wrong" patterns and their correct counterparts. Print this. Skim before the exam.
+</p>
 
-For last-minute review.
+<div class="ccaf-chip-row" markdown="0">
+  <span class="ccaf-chip ccaf-chip--critical">High-yield</span>
+  <span class="ccaf-chip">~5 min skim</span>
+</div>
+</div>
 
 ## "Always wrong on this exam" rules
 

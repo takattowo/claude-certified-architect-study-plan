@@ -1,7 +1,10 @@
 # Module 3 — Hooks, Workflows & Sessions
 
-<div class="ccaf-module-meta" markdown>
-**Domains:** D1.3 + D1.4 · **Weight:** part of ~25% · **Time budget:** 5–7 hr
+<div class="ccaf-module-meta" markdown="0">
+  <span class="ccaf-chip ccaf-chip--domain">D1.3 + D1.4 · Agentic Architecture</span>
+  <span class="ccaf-chip">Weight: part of ~25%</span>
+  <span class="ccaf-chip ccaf-chip--time">5–7 hr</span>
+  <span class="ccaf-chip ccaf-chip--level">Foundations</span>
 </div>
 
 ## What you'll learn
